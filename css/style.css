@@ -68,16 +68,19 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3px;
+    /* padding: 0 3px; */
+    border-radius: 5px;
     font-size: 15px;
     font-weight: 600;
     color: #222222;
     white-space: nowrap;
     transition: 0.3s;
-    position: relative;
+    transition: "border-color" 0.3s;
+    text-replace: auto;
 }
 
-.navbar>ul>li>a:before {
+
+/* .navbar>ul>li>a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -88,7 +91,7 @@ a:hover {
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
-}
+} */
 
 .navbar>ul>li {
     padding: 10px 0 10px 24px;
@@ -101,8 +104,15 @@ a:hover {
 }
 
 .navbar a:hover,
+.navbar li:hover>a,
 .navbar .active,
-.navbar .active:focus,
+.navbar .active:focus {
+    color: #222222;
+    border: var(--red-primary) solid 1px;
+    border-radius: 5px;
+}
+
+.navbar a:hover,
 .navbar li:hover>a {
     color: var(--red-primary);
 }
@@ -113,9 +123,14 @@ a:hover {
 #hero {
     width: 100%;
     height: 75vh;
-    background: url('../img/hero-bg.jpg') top left;
+    background: url('../img/hero-bg.jpg') top center;
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
+}
+
+#omid-message {
+    color: #222222;
 }
 
 
