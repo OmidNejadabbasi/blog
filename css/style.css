@@ -50,9 +50,20 @@ a:hover {
 }
 
 #header {
+    position: relative;
+    background-color: #fff;
     box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
-    height: 75px;
+    z-index: 997;
+    min-height: 75px;
     transition: .5s;
+}
+
+#header.fixed-top {
+    min-height: 75px;
+}
+
+.scrolled-offset {
+    margin-top: 75px;
 }
 
 #navbar ul {
@@ -70,13 +81,12 @@ a:hover {
     justify-content: space-between;
     /* padding: 0 3px; */
     border-radius: 5px;
-    font-size: 15px;
+    border-color: transparent;
     font-weight: 600;
     color: #222222;
     white-space: nowrap;
     transition: 0.3s;
-    transition: "border-color" 0.3s;
-    text-replace: auto;
+    transition: border-color 0.3s;
 }
 
 
@@ -108,8 +118,9 @@ a:hover {
 .navbar .active,
 .navbar .active:focus {
     color: #222222;
-    border: var(--red-primary) solid 1px;
-    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--red-primary);
+    border-style: solid;
 }
 
 .navbar a:hover,
@@ -122,15 +133,20 @@ a:hover {
 
 #hero {
     width: 100%;
-    height: 75vh;
-    background: url('../img/hero-bg.jpg') top center;
+    height: 80vh;
+    background: url('../img/hero-2.jpg') top center;
+    /* background: #c44800; */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
 #omid-message {
-    color: #222222;
+    color: #ffffff;
+    height: 210px;
+    border-radius: 15px;
+    background: #00000060;
+    padding: 8px;
 }
 
 
@@ -232,4 +248,8 @@ a:hover {
 
 #footer .copyright p {
     margin: 10px 0;
+}
+
+.typed-cursor {
+    display: none;
 }
