@@ -1,5 +1,6 @@
 :root {
     --red-primary: #d90429;
+    --red-hover-border: #da8f9c;
 }
 
 *,
@@ -50,7 +51,6 @@ a:hover {
 }
 
 #header {
-    position: relative;
     background-color: #fff;
     box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
     z-index: 997;
@@ -66,20 +66,15 @@ a:hover {
     margin-top: 75px;
 }
 
-#navbar ul {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+
+/* #navbar ul { } */
 
 .navbar a,
 .navbar a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0 3px; */
+    padding: .5em 1em !important;
     border-radius: 5px;
     border-color: transparent;
     font-weight: 600;
@@ -89,22 +84,8 @@ a:hover {
     transition: border-color 0.3s;
 }
 
-
-/* .navbar>ul>li>a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--red-primary);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-} */
-
-.navbar>ul>li {
-    padding: 10px 0 10px 24px;
+#navlist>li {
+    padding: 10px 0 10px 20px;
 }
 
 .navbar li:hover a::before,
@@ -114,18 +95,28 @@ a:hover {
 }
 
 .navbar a:hover,
-.navbar li:hover>a,
+.navbar li:hover>a {
+    color: var(--red-primary);
+    border-width: 1px;
+    border-color: var(--red-hover-border);
+    border-style: solid;
+}
+
 .navbar .active,
 .navbar .active:focus {
     color: #222222;
     border-width: 1px;
-    border-color: var(--red-primary);
+    border-color: #ccc;
     border-style: solid;
+    box-shadow: 0px 0px 8px -2px #959595;
+    /* background: linear-gradient(90deg, #f9aaaa2f, 0%, #ff000029 65%, #fc53530f 100%); */
 }
+
+.navbar-nav .nav-link {}
 
 .navbar a:hover,
 .navbar li:hover>a {
-    color: var(--red-primary);
+    color: var(--red-hover-border);
 }
 
 
