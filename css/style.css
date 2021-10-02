@@ -112,8 +112,6 @@ a:hover {
     /* background: linear-gradient(90deg, #f9aaaa2f, 0%, #ff000029 65%, #fc53530f 100%); */
 }
 
-.navbar-nav .nav-link {}
-
 .navbar a:hover,
 .navbar li:hover>a {
     color: var(--red-hover-border);
