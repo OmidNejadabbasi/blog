@@ -25,7 +25,7 @@ a:hover {
 }
 
 #top-section {
-    height: 40px;
+    height: 2.1em;
     font-size: 14px;
     background-color: var(--red-primary);
     color: white;
@@ -122,7 +122,7 @@ a:hover {
 
 #hero {
     width: 100%;
-    height: 80vh;
+    height: 73vh;
     background: url('../img/hero-2.jpg') top center;
     /* background: #c44800; */
     background-size: cover;
@@ -241,4 +241,49 @@ a:hover {
 
 .typed-cursor {
     display: none;
+}
+
+
+/* Scroll down indicator */
+
+#scrolldown-indicator div {
+    left: 50%;
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0;
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    z-index: 80;
+    top: 8px;
+    position: absolute;
+    border-width: 0 0.25em 0.25em 0;
+    border-style: solid;
+    border-color: lightpink;
+    animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+}
+
+#scrolldown-indicator div:nth-child(2) {
+    top: 23px;
+}
+
+@keyframes scrolldown {
+    0% {
+        transform: translateY(20%) rotate(45deg) translateX(-50%);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(0%) rotate(45deg) translateX(-50%);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(20%) rotate(45deg) translateX(-50%);
+        opacity: 0.7;
+    }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: .5px;
+    box-shadow: 0 0 3px -1px lightpink;
 }
